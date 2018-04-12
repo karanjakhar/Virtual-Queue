@@ -43,10 +43,5 @@ On Fee Counter Side:-
   4)   After all are cleared a report will be generated showing total deposit/No. 
 
               Of Student  Deposited fee.
-Team Members:-
-Karan Jakhar 17BCS1647 (CSE)
-Harnoor Singh 17BCS1746 (CSE)
-karanjakhar4@gmail.com
-noorsingh6693@gmail.com
-
+ 
 

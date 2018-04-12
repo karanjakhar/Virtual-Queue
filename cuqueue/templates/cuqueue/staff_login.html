@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+	<head>
+	    <title>VIRTUAL QUEUE/Staff login</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/staff_background.css">
+     </head>
+		<body>
+		    <div class="looks"></div>
+			<header>
+			    <div><img  src="/static/chandigarh-university-seal.png"></div>
+				<div class="container">
+				<h1 class="titlebar col-xl-12">
+				    VIRTUAL QUEUE
+				</h1>
+				<div class="container">
+				    <div class="second_title">
+			            <div class="home">A Better Way To Pay Your Fees</div>
+		             </div>
+			</header>
+            <div class="container">
+
+				<form action="staff"  method="post">
+				     {% csrf_token %}
+                   		<div class="form-group">
+                   			<div class="User_Name">
+                   			<label for="exampleInputName">User Name:</label>
+                   			<input name="username" type="text" class="form-control" id="id_username" placeholder="Enter username" required="" maxlength="30">
+
+							  	</div>
+							    <div class="Password">
+							  <label for="exampleInputPassword">Password:</label>
+							  <input name="password" type="password" class="form-control" id="id_password" placeholder="Enter Password" required="" maxlength="30">
+
+							    		</div>
+							  	<button type="submit" class="btn btn-primary" style="padding:15px 50px; display:block; margin: 0 auto;">
+                                Log in
+							  	</button>
+							  	</div>
+
+							</form>
+
+                        </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<h1>VIRTUAL QUEUE</h1>
+<form action="staff" method="post">
+    {% csrf_token %}
+    {{ form|linebreaks }}
+    <input value="Login" type="submit"/>
+</form>
+
+</body>
+</html>-->

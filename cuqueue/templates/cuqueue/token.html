@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VIRTUAL QUEUE</title>
+</head>
+<body>
+    <h1>VIRTUAL QUEUE</h1>
+    <br/>
+    <h2>Your Token is :</h2>
+       {{ token }}
+       <br/>
+    <form action="home" method="get">
+        {% csrf_token %}
+         <input type="submit" value="OK"/>
+
+    </form>
+
+</body>
+</html>

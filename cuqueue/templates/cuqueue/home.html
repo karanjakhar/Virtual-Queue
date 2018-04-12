@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+	<head>
+	    <title>VIRTUAL QUEUE</title>
+
+		<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/background.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/csshake.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     </head>
+		<body>
+		    <div class="looks"></div>
+			<header>
+			    <div><img  src="/static/chandigarh-university-seal.png" style='width:40%;' border="0" alt="Null"></div>
+				    <div class="container">
+				        <h1 class="titlebar col-xl-12">VIRTUAL QUEUE
+				        </h1>
+				            <div class="second_title">
+			            <div class="home">A Better Way To Pay Your Fees</div>
+		            </div>
+		         </div>
+			</header>
+            <div class="container">
+				<form action="Token"  method="post">
+                   		<div class="form-group">
+                   			<div class="Name">
+                   			   <!-- <form action="/action_page.php">-->
+                   			    <label for="exampleInputName">Name:</label>
+                   			        <input name="name" type="text" pattern="[A-Za-z]{0,}" class="form-control" id="id_name" placeholder="Enter Name" required="" maxlength="30">
+							         {% csrf_token %}
+                               <!-- </form>-->
+						   </div>
+						    <div class="UID">
+							     <label for="exampleInputUID">UID:</label>
+							        <input name="uid" type="text" class="form-control" id="id_uid" placeholder="Enter UID" required="" maxlength="9" min="9">
+							            {% csrf_token %}
+							  </div>
+							  <div class="MobileNumber">
+							    <label for="exampleInputNumber">Mobile Number:</label>
+							        <input name="mobile_no" type="text" pattern="[0-9].{0,}" class="form-control" id="id_mobile_no" placeholder="Where to Contact" required="" maxlength="11"  pattern="^\d{4}\d{3}\d{4}$" required >
+							    	    {% csrf_token %}
+							   </div>
+							    <div class="Email">
+                   			        <label for="exampleInputEmail">Email:</label>
+                   			            <input name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" class="form-control" id="id_email" placeholder="your@email.com" required="" maxlength="30">
+							                {% csrf_token %}
+							  	</div>
+					     </div>
+					 <div class="btn">
+        			  	<div class="shake-rotate">
+        			  	  <button id="myBtn" type="submit" style= "padding-right:10px;display:block;" value="submit">
+                            Create Token
+        			  	   </button>
+        			  	</div>
+                     </div>
+                     </form>
+            </div>
+
+
+                <!-- The Modal -->
+				<div id="myModal" class="modal">
+				  <!-- Modal content -->
+				  <div class="modal-content">
+				    <div class="modal-body">
+				        <div class="notify successbox">
+                            <h1>Success!</h1>
+                            <span class="alerticon"><img src="/static/admin/img/icon-yes.svg" height="24%" width="24%" alt="checkmark" hspace="120" /></span>
+                        <p>
+                            {%for message in messages%}
+				             {{message}}
+				             {%endfor%}
+                        </p>
+                      </div>
+                      <div class="fbtn">
+                        <button class="container" id="mybtn1">
+                                OKAY
+                            </button>
+                      </div>
+                      </div>
+				   </div>
+				  </div>
+				  <div class="container col-lg-12 col-sm-12">
+                        <div class="container-fluid" style="padding-top:10px;">
+                         <div  calss="LineRect" style="text-width:bold; font-family:TimesNewRoman;text-weighth:bold;font-size:50px;text-spacing:2px;">
+                          <a style="text-shadow: 2px 2px 4px #FFFFFF; text-weidth:900;">GET IN TOUCH</a>
+                          </div>
+                          <div class="row" style="background-color:lavender;">
+                               <div class="carddesign col-xs-1 col-sm-2 col-lg-2" style="padding-top:10px">
+                    				<div class='card card-profile text-center'>
+                                      <img alt='' class='card-img-top' src='https://unsplash.it/340/160?image=354'>
+                                      <div class='card-block'>
+                                        <img alt='' class='card-img-profile' src='/static/PicsArt_03-25-04.39.26.jpeg '>
+                                        <h4 class='card-title'>
+                                          Harnoor Singh
+                                          <small><br>Front-end designer</small>
+                                        </h4>
+                                        <div class='card-links'>
+                                          <a class='fa fa-github' href='https://github.com/Harnoor6693'></a>
+                                          <a class='fa fa-linkedin' href='https://www.linkedin.com/in/harnoor-s-0209b0137/'></a>
+                                          <a class='fa fa-facebook' href='https://www.facebook.com/harnoor.singh.10236'></a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="carddesign1 col-xs-1 col-sm-2 col-lg-2" style="padding-top:10px">
+                                    <div class='card card-profile text-center'>
+                                      <img alt='' class='card-img-top' src='https://unsplash.it/340/160?image=354'>
+                                         <div class='card-block'>
+                                            <img alt='' class='card-img-profile' src='/static/150x150.png '>
+                                                <h4 class='card-title'>
+                                                    Karan Jakhar
+                                                        <small>Back-end developer</small>
+                                                 </h4>
+                                            <div class='card-links' style="padding-bottom:7px;">
+                                              <a class='fa fa-github' href='https://github.com/karanjakhar'></a>
+                                              <a class='fa fa-linkedin' href='https://www.linkedin.com/in/karan-jakhar-365662149/'></a>
+                                              <a class='fa fa-facebook' href='https://www.facebook.com/karan.jakhar.75'></a>
+                                             </div>
+                                          </div>
+                                    </div>
+                                 </div>
+                                  <div class="carddesign2 col-xs-1 col-sm-8 col-lg-8" style="padding-top:10px; background:white">
+                                    <div class='card card-profile text-left' style="background:#333; color:#fff;padding-top:10px;padding-left:10px">
+                                        <p calss="container-fluid" style="font-family:Open Sans;">
+                                                <b>Mob:</b> 7009770701
+                                                <br><b>Email:</b><a href="mailto:noorsingh6693@gmail.com"> noorsingh6693@gmail.com</a></br>
+                                                <b>Mob:</b> 9646266873
+                                                <br><b>Email:</b><a href="mailto:karanjakhar4@gmail.com"> karanjakhar4@gmail.com</a></br>
+                                                <br>
+                                                <a style="font-size:20px;letter-spacing:2px;font-weight: bold;text-decoration:underline;" href="http://www.cuchd.in/">Chandigarh University</a></br>
+                                                NH-95 Chandigarh-Ludhiana Highway,<br>Mohali,Punjab (INDIA)</br>
+                                                General Helpline No:+91-160-3051003
+                                                <br>Toll Free: 1800 200 0025</br>
+                                                <a style="letter-spacing:2px;" href="https://maps.google.com/maps?q=30.764314651489258%2C76.57359313964844&z=17&hl=en" style="">
+                                                        <i class="fa fa-map-marker"></i>
+                                                    <span>Open In Google Maps</span>
+                                                </a>
+                                        </p>
+                                    </div>
+                                 </div>
+                          </div>
+                      </div>
+                    </div>
+            </body>
+<!--<form action="Token"  method="post">
+    {% csrf_token %}
+    {% if  token %}
+     {{ token }}
+
+    {% endif %}
+    <h2>Name:</h2>
+      <br><br> {{ form.name }}<br>
+    <input type="submit" value="Create Token"/>
+</form>-->
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// When the user clicks the button, open the modal
+{%if messages%}
+{
+    modal.style.display = "block";
+}
+ {%endif%}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<script>
+var modal = document.getElementById('myModal');
+// Button to close the Modal
+var btn1 = document.getElementById("mybtn1");
+
+//When user cilicks on button of modal,close it
+btn1.onclick = function(event) {
+        modal.style.display = "none";
+
+    }
+</script>
+</html>
